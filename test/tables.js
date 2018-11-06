@@ -1,6 +1,6 @@
 const webdriver = require("selenium-webdriver");
 By = webdriver.By,
-until = webdriver.until;
+  until = webdriver.until;
 const chai = require("chai");
 const expect = require('chai').expect;
 const assert = require('assert');
@@ -12,16 +12,11 @@ const assert = require('assert');
 var driver = new webdriver.Builder().forBrowser("chrome").build();
 
 
-const tablesPage =	"http://the-internet.herokuapp.com/tables";
+const tablesPage = "http://the-internet.herokuapp.com/tables";
 
 
-function sortableTables (driver) {
-
-  describe('sort the tablesPage', function(){
-      it('should sort by the due amount asc', function(){
-
-      });
-    })
+function sortableTables(driver) {
+  driver.get(tablesPage)
 }
 
 

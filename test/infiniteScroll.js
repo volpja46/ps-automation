@@ -7,15 +7,9 @@ const chai = require("chai");
 
 
 
-var driver = new webdriver.Builder().forBrowser("chrome").build();
-// new browser created
-// create a method which scrolls down the page a set number of times.
-// reload 3 times before stopping WAIT
-
 const infiniteScrollPage = "http://the-internet.herokuapp.com/infinite_scroll";
 
-// reload pg
-
+var driver = new webdriver.Builder().forBrowser("chrome").build();
 
 function infiniteScroll(scrollNumber) {
   driver.get(infiniteScrollPage)
@@ -29,7 +23,7 @@ function infiniteScroll(scrollNumber) {
     while (i < 3) {
       i++;
       infiniteScroll(scrollNumber);
-      // console.log(scrollNumber) 
+      // console.log(scrollNumber)
     }
   }, 5000)
 }

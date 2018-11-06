@@ -26,11 +26,9 @@ function getRandomNumber() {
 }
 
 function checkBox1(randomNum) {
-  console.log(randomNum)
-
   let i = 0
   while (i <= randomNum) {
-    //  check box #1 will be checked & unchecked randomNum times
+    //  check box #1 will be checked randomNum times
     checkbox1.click()
     i++
   }
@@ -39,11 +37,10 @@ function checkBox1(randomNum) {
 
 
 function checkBox2(num) {
-  console.log('hi')
   var num = Math.floor(Math.random() * (10 - 1));
   let i = 0
   while (i <= num) {
-    //  check box #2 will be checked/unchecked num times
+    //  check box #2 will be checked num times
     checkbox2.click()
     i++
   }
