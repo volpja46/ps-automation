@@ -15,19 +15,19 @@
 
 
 function dropdown (driver) {
-
     var dropdown = driver.findElement(By.css("#dropdown"))
     driver.get(dropdownPage)
-
 // grab options from dropfown
-     var op1 = driver.findElement(webdriver.By.css('#dropdown > option:nth-child(2)'));
-	   var op2 = driver.findElement(webdriver.By.css('//*[@id="dropdown"]/option[3]'));
-
+    setTimeout(function() {
+     var op1 = driver.findElement(webdriver.By.xpath('//*[@id="dropdown"]/option[2]'));
+	   var op2 = driver.findElement(webdriver.By.xpath('//*[@id="dropdown"]/option[3]'));
 // turn into an array of the options to use array methods
 	   var options = [op1, op2];
-	   var randomNumber = options[Math.floor(Math.random() * options.length)];
+	   var randomOption = options[Math.floor(Math.random() * options.length)];
+     // console.log(randomOption)
 // select random item from array
-	   randomNumber.click();
-  }
+     randomOption.click();
+  }, 2000)
+}
 
 dropdown(driver)
